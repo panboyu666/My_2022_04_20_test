@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="MyViewModelXML"
+            type="pan.bo.yu.my_2022_04_20_test.MyViewModel" />
+
+        <variable
+            name="MainActivity2XML"
+            type="pan.bo.yu.my_2022_04_20_test.MainActivity2" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/a06"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="100"
+        tools:context=".MainActivity2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="158dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="0dp"
+                android:src="@drawable/a03" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myfont"
+                android:paddingTop="1dp"
+                android:text="衣博士洗衣連鎖"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="30"
+            android:background="@drawable/shape2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="登入"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="15dp"
+                android:text="請填寫手機號碼將是您的帳號。" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginHorizontal="15dp"
+                android:hint="手機號碼"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="3dp"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/a04"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:textSize="23sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/t1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:hint="認證碼"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeWidthFocused="3dp"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="23sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/bget"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@+id/t1"
+                    android:backgroundTint="#0080FF"
+                    android:text="取得認證碼"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/b1"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t1"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="20dp"
+                    android:onClick="checkOtpid"
+                    android:text="註冊/登入"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    app:strokeColor="#6C6C6C"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/tt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/b1"
+                    android:layout_marginTop="60dp"
+
+                    android:gravity="center_horizontal"
+                    android:text="註冊即表示已閱讀\n並同意衣博士服務條款和隱私條款" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bb2"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tt1"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="20dp"
+                    android:onClick="JumpTurn"
+                    android:text="開發者測試登入"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    app:strokeColor="#6C6C6C"
+                    app:strokeWidth="2dp"
+
+                    />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"></LinearLayout>
+
+
+    </LinearLayout>
+</layout>

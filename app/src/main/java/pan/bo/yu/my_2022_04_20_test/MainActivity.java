@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         JumpTurn();
-
+        JumpTurn();JumpTurn();JumpTurn();JumpTurn();JumpTurn();
 
     }
 
